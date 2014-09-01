@@ -1,22 +1,20 @@
 Problem 1
   Part (a):
   The following are acceptable behaviors in solving homeworks/projects:
-
   Looking up information relevant to the course online.
   Talking to my classmates about the problems.
   Asking the course staff for help.
 
   Part (b):
-  The following are recommended ways of writing code
-  gedit
+  The following are recommended ways of writing code:
   emacs
   Eclipse
   vim
   Microsoft Visual Studio
-  notepad
 
-Part(c):
-Each student can submit up to 3 homeworks a day late for full credit.
+
+  Part(c):
+  Each student can submit up to 3 homeworks a day late for full credit.
 
   Part (d):
   There is an hour grace period per assignment for 50% credit.
@@ -26,8 +24,8 @@ Each student can submit up to 3 homeworks a day late for full credit.
 
 Problem 2
 
-Part (a):
-Which of the following git user interfaces are accepted and supported in this course?
+  Part (a):
+  Which of the following git user interfaces are accepted and supported in this course?
 
 Git Bash (Windows)
 GitHub Desktop Client
@@ -37,8 +35,9 @@ Tower Git Client
 Part (b):
 Provide the appropriate git command to perform the following operations:
 
-Stage an untracked file to be committed. The file is called 'hw1q2b.cpp'.
-Display the details of the last three commits in the repository.
+  Stage an untracked file to be committed. The file is called 'hw1q2b.cpp'.
+  Display the details of the last three commits in the repository.
+  git log
 Part (c)
 Let's say you staged three files to be committed. Then, you ran the following command:
 
