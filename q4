@@ -1,0 +1,63 @@
+#include <iostream>
+#include <sstream> 
+#include <fstream>
+
+using namespace std;
+
+int main(int argc, char* argv[])
+{
+  if (argc<2){
+  	cout<< "Please enter file name to read as an argument"<< endl;
+  	return 1; 
+  }
+  
+  ifstream fin; 
+  fin.open(argv[1]);
+  
+  if (fin.fail()){ 
+  	cout<<"Error opening file"<< endl;
+  	return 1; 
+  }
+
+  int numLines;
+  fin>> numLines;
+  //check if int 
+  if (fin.fail()){
+  	cout<< "File Error"<< endl;
+  	return 1;
+  }
+  
+  //need to dynamically allocate memory to record number of words in each line
+  int* Linewords= new int[numLines];
+  
+  int currentline= 0;
+  fin.ignore();
+  while(currentline<=numLines){
+    string phrase;
+
+    getline( fin, phrase);
+    
+    stringstream ss(phrase);
+
+    string str(ss.str());
+    
+    int counter = 0;
+
+    while(ss >> str)
+    {
+      counter++;
+      Linewords[currentline]= counter;
+    }
+  
+  currentline++;
+  }
+  for (int i = 2; i >= 0; i--)
+  {
+    cout<< Linewords[i]<< endl;
+  }
+
+  delete [] Linewords;
+  fin.close();
+
+  return 0;
+}
